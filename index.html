@@ -15,29 +15,39 @@
         h1 {
             color: #333;
         }
-        table {
-            width: 80%;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 600px;
             margin: 20px auto;
-            border-collapse: collapse;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
+        .chapter {
             background-color: #007bff;
             color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .chapter:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <h1>Data from Google Sheets</h1>
+    <div class="container">
+        <div class="chapter">Chapter 1</div>
+        <div class="chapter">Chapter 2</div>
+        <div class="chapter">Chapter 3</div>
+        <div class="chapter">Chapter 4</div>
+        <div class="chapter">Chapter 5</div>
+        <div class="chapter">Chapter 6</div>
+        <div class="chapter">Chapter 7</div>
+    </div>
     <table id="data-table">
         <thead>
             <tr id="table-header"></tr>
