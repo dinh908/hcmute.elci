@@ -1,34 +1,163 @@
+/* CSS Reset (tùy chọn, nhưng tốt để đảm bảo tính nhất quán) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: San Francisco, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    margin: 20px;
-}
-
-h1 {
+    font-family: 'Roboto', sans-serif; /* Thay đổi font chữ */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Màu xanh dương nhạt */
     color: #333;
+    line-height: 1.6; /* Khoảng cách dòng */
 }
 
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #007bff;
+/* Banner */
+.banner {
+    background-color: #007bff; /* Màu xanh dương đậm */
     color: white;
+    padding: 20px 0; /* Tăng padding */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.banner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
+.banner li {
+    padding: 10px 20px;
+    transition: transform 0.2s ease; /* Hiệu ứng khi hover */
+}
+
+.banner li:hover {
+    transform: translateY(-2px);
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+}
+
+/* Container */
+.container {
+    padding: 30px; /* Tăng padding */
+    max-width: 960px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa */
+}
+
+/* Section */
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Menu môn học */
+.mon-hoc-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mon-hoc-menu li {
+    margin-bottom: 8px;
+}
+
+.mon-hoc-menu > ul > li > a { /* Chỉ chọn link cấp 1 */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff; /* Màu trắng cho nền menu */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mon-hoc-menu > ul > li > a:hover {
+    background-color: #e9f2ff; /* Màu xanh dương nhạt hơn khi hover */
+    color: #0056b3;
+}
+
+/* Menu chương */
+.chuong-menu {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc; /* Thêm đường kẻ dọc để dễ nhìn */
+}
+
+.chuong-menu li {
+    margin-bottom: 5px;
+}
+
+.chuong-menu a {
+    color: #0056b3; /* Màu xanh dương đậm hơn cho chương */
+    border-color: #0056b3;
+}
+
+.chuong-menu a:hover {
+    background-color: #d0e2ff;
+}
+
+/* Menu Nội dung */
+.noi-dung-menu{
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+/*Thông báo đang cập nhật */
+.dang-cap-nhat {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Màu xám đậm */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design (ví dụ) */
+@media (max-width: 768px) {
+    .banner ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner li {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .chuong-menu {
+        margin-left: 10px; /* Giảm margin cho màn hình nhỏ */
+    }
+}
