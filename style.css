@@ -55,12 +55,17 @@ body {
 }
 
 /* Section */
-section {
+.section {
     margin-bottom: 30px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    display: none; /* Ẩn tất cả các section ban đầu */
+}
+
+#mon-hoc {
+    display: block; /* Hiển thị section Môn Học ban đầu */
 }
 
 section h2 {
@@ -103,6 +108,10 @@ section h2 {
     margin-left: 20px;
     padding-left: 10px;
     border-left: 1px solid #ccc; /* Thêm đường kẻ dọc để dễ nhìn */
+    display: none; /* ẩn chuong menu ban đầu */
+}
+.mon-hoc-menu > ul > li > a.active + .chuong-menu {
+        display: block; /* Hien chuong menu khi a.active */
 }
 
 .chuong-menu li {
@@ -122,6 +131,10 @@ section h2 {
 .noi-dung-menu{
     margin-left: 20px;
     padding-left: 10px;
+    display: none; /* an noi dung menu ban dau */
+}
+.chuong-menu > li > a.active + .noi-dung-menu {
+        display: block; /* Hien noi dung menu khi a.active */
 }
 
 /*Thông báo đang cập nhật */
@@ -142,6 +155,22 @@ footer {
     padding: 20px 0;
 }
 
+/* Khu vực hiển thị nội dung chương */
+#content-area {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#content-area h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+#content-area{
+  display: none; /*An khu vuc nay ban dau*/
+}
 /* Responsive Design (ví dụ) */
 @media (max-width: 768px) {
     .banner ul {
