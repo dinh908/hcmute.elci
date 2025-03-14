@@ -9,101 +9,61 @@
 <body>
     <div class="banner">
         <ul>
-            <li><a href="#mon-hoc">Môn Học</a></li>
-            <li><a href="#cua-hang">Cửa Hàng</a></li>
-            <li><a href="#booking">Booking</a></li>
-            <li><a href="#infor">Thông Tin</a></li>
+            <li><a href="#" data-section="mon-hoc">Môn Học</a></li>
+            <li><a href="#" data-section="cua-hang">Cửa Hàng</a></li>
+            <li><a href="#" data-section="booking">Booking</a></li>
+            <li><a href="#" data-section="infor">Thông Tin</a></li>
         </ul>
     </div>
 
     <div class="container">
-        <section id="mon-hoc" class="mon-hoc-menu">
+        <section id="mon-hoc" class="mon-hoc-menu section" data-section-id="mon-hoc">
             <h2>Môn Học</h2>
             <ul>
                 <li>
-                    <a href="#">Mạch Điện</a>
-                    <ul class="chuong-menu">
+                    <a href="#" data-subject="mach-dien">Mạch Điện</a>
+                    <ul class="chuong-menu" data-subject-id="mach-dien">
                         <li>
-                            <a href="#">Chương 1</a>
-                            <ul class="noi-dung-menu">
+                            <a href="#" data-chapter="chuong1">Chương 1</a>
+                            <ul class="noi-dung-menu" data-chapter-id="chuong1">
                                 <li><a href="#" data-content="chuong1-noi-dung">Nội Dung Chương 1</a></li>
                                 <li><a href="#" data-content="chuong1-bai-tap">Bài Tập Chương 1</a></li>
                                 <li><a href="#" data-content="chuong1-luyen-tap">Luyện Tập Chương 1</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Chương 2</a>
-                            <ul class="noi-dung-menu">
+                            <a href="#" data-chapter="chuong2">Chương 2</a>
+                            <ul class="noi-dung-menu" data-chapter-id="chuong2">
                                 <li><a href="#" data-content="chuong2-noi-dung">Nội Dung Chương 2</a></li>
                                 <li><a href="#" data-content="chuong2-bai-tap">Bài Tập Chương 2</a></li>
                                 <li><a href="#" data-content="chuong2-luyen-tap">Luyện Tập Chương 2</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">Chương 3</a>
-                            <ul class="noi-dung-menu">
-                                <li><a href="#" data-content="chuong3-noi-dung">Nội Dung Chương 3</a></li>
-                                <li><a href="#" data-content="chuong3-bai-tap">Bài Tập Chương 3</a></li>
-                                <li><a href="#" data-content="chuong3-luyen-tap">Luyện Tập Chương 3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Chương 4</a>
-                            <ul class="noi-dung-menu">
-                                <li><a href="#" data-content="chuong4-noi-dung">Nội Dung Chương 4</a></li>
-                                <li><a href="#" data-content="chuong4-bai-tap">Bài Tập Chương 4</a></li>
-                                <li><a href="#" data-content="chuong4-luyen-tap">Luyện Tập Chương 4</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Chương 5</a>
-                            <ul class="noi-dung-menu">
-                                <li><a href="#" data-content="chuong5-noi-dung">Nội Dung Chương 5</a></li>
-                                <li><a href="#" data-content="chuong5-bai-tap">Bài Tập Chương 5</a></li>
-                                <li><a href="#" data-content="chuong5-luyen-tap">Luyện Tập Chương 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Chương 6</a>
-                            <ul class="noi-dung-menu">
-                                <li><a href="#" data-content="chuong6-noi-dung">Nội Dung Chương 6</a></li>
-                                <li><a href="#" data-content="chuong6-bai-tap">Bài Tập Chương 6</a></li>
-                                <li><a href="#" data-content="chuong6-luyen-tap">Luyện Tập Chương 6</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Chương 7</a>
-                            <ul class="noi-dung-menu">
-                                <li><a href="#" data-content="chuong7-noi-dung">Nội Dung Chương 7</a></li>
-                                <li><a href="#" data-content="chuong7-bai-tap">Bài Tập Chương 7</a></li>
-                                <li><a href="#" data-content="chuong7-luyen-tap">Luyện Tập Chương 7</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        </ul>
                 </li>
             </ul>
-
-            <!-- Khu vực hiển thị nội dung chương -->
-            <div id="content-area" class="noi-dung-chuong">
-                <h2>Chào mừng!</h2>
-                <p>Chọn một chương và nội dung để bắt đầu.</p>
-            </div>
         </section>
 
-        <section id="cua-hang">
+        <section id="cua-hang" class="section" data-section-id="cua-hang">
             <h2>Cửa Hàng</h2>
             <p class="dang-cap-nhat">Đang cập nhật...</p>
         </section>
 
-        <section id="booking">
+        <section id="booking" class="section" data-section-id="booking">
             <h2>Booking</h2>
             <p class="dang-cap-nhat">Đang cập nhật...</p>
         </section>
 
-        <section id="infor">
+        <section id="infor" class="section" data-section-id="infor">
             <h2>Thông Tin</h2>
             <p class="dang-cap-nhat">Đang cập nhật...</p>
         </section>
+
+        <!-- Khu vực hiển thị nội dung chương (ẩn ban đầu) -->
+        <div id="content-area" class="noi-dung-chuong">
+            <h2 id="content-title"></h2>
+            <div id="content-body"></div>
+        </div>
     </div>
 
     <footer>
